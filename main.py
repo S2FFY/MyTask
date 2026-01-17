@@ -1,5 +1,5 @@
 """
-Приложение HPP (MyTasks)
+Приложение MyTasks
 """
 import flet as ft
 from module.data_manager import load_data, save_data
