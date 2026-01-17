@@ -1,12 +1,12 @@
 """
-Приложение HPP (MyTasks)
+Приложение MyTask
 """
 import flet as ft
 from module.data_manager import load_data, save_data
 from module.todo_list import create_todo_list_page
 from module.habit_tracker import create_habit_tracker_page
 from module.eisenhower_matrix import create_eisenhower_matrix_page
-# from module.pomodoro import create_pomodoro_page
+from module.pomodoro import create_pomodoro_page
 from module.settings import create_settings_page
 
 
@@ -14,13 +14,13 @@ class DataManager:
     """Класс для управления данными приложения"""
     def __init__(self):
         self.data = load_data()
-    
+
     def get_data(self):
         return self.data
-    
+
     def save(self):
         save_data(self.data)
-    
+
     def update_data(self, new_data):
         self.data.update(new_data)
         self.save()
@@ -31,15 +31,15 @@ def main(page: ft.Page):
     # Настройка страницы
     page.title = "MyTasks"
     page.theme_mode = ft.ThemeMode.LIGHT
-    
+
     # Инициализация менеджера данных
     data_manager = DataManager()
-    
+
     # Загрузка темы
     theme = data_manager.get_data().get("theme", "light")
     if theme == "dark":
         page.theme_mode = ft.ThemeMode.DARK
-    
+
     # Заголовок приложения
     header = ft.Container(
         content=ft.Text(
@@ -52,14 +52,14 @@ def main(page: ft.Page):
         padding=ft.Padding(0, 10, 0, 10),
         border=ft.Border(bottom=ft.BorderSide(1, ft.Colors.GREY_400))
     )
-    
+
     # Контентная область
     content_area = ft.Container(
         content=create_todo_list_page(page, data_manager),
         expand=True,
         padding=20
     )
-    
+
     # Функция для переключения вкладок
     def on_navigation_change(e):
         selected_index = e.control.selected_index
@@ -74,7 +74,7 @@ def main(page: ft.Page):
         elif selected_index == 4:
             content_area.content = create_settings_page(page, data_manager)
         page.update()
-    
+
     # NavigationRail
     nav_rail = ft.NavigationRail(
         selected_index=0,
@@ -82,8 +82,9 @@ def main(page: ft.Page):
         min_width=100,
         min_extended_width=200,
         leading=ft.FloatingActionButton(
-            icon=ft.Icons.CREATE,
+            icon=ft.Icons.APPS,
             tooltip="HPP",
+            content=ft.Text("HPP"),
             on_click=lambda _: None
         ),
         group_alignment=-0.25,

@@ -1,8 +1,16 @@
 {
   "tasks": [
     {
-      "id": "f18cf848-d896-4469-801a-f3ca4db00d1a",
-      "title": "ва",
+      "id": "aae41298-f053-43a3-990e-75e8c2c97cbb",
+      "title": "sdfgh",
+      "description": "",
+      "completed": false,
+      "coefficient": 4,
+      "subtasks": []
+    },
+    {
+      "id": "3ab8310e-1c29-4d8d-b307-c031aba0cd2e",
+      "title": "ftu",
       "description": "",
       "completed": false,
       "coefficient": 1,
@@ -11,40 +19,21 @@
   ],
   "habits": [
     {
-      "id": "92a01595-7549-42a2-bb3c-10440ab17153",
-      "name": "Новая привываывавыачка",
-      "count": 10
-    },
-    {
-      "id": "3857dd58-5268-4ae9-bd74-00305edfea45",
-      "name": "Новая привычка",
-      "count": 3
-    },
-    {
-      "id": "31b654aa-e70c-46f9-ad7e-fa20cd1e3f84",
-      "name": "Новая привычка",
-      "count": 0
-    },
-    {
-      "id": "16ee90fc-b964-43e5-83f3-a0d8e8d5b17e",
-      "name": "Новая привычка",
-      "count": 0
-    },
-    {
-      "id": "602bc981-43ae-4db2-8fba-07e45a4ba1c9",
-      "name": "Новая привычка",
-      "count": 0
-    },
-    {
-      "id": "190bdc7a-dc8d-4559-b5b9-b13484760a61",
-      "name": "Новая привычка",
-      "count": 0
-    },
-    {
       "id": "95b0109c-e98b-4994-97c9-03061de947c8",
+      "name": "Новая привычка",
+      "count": 1
+    },
+    {
+      "id": "305302d5-6ba0-4b47-b540-17c755e254ec",
       "name": "Новая привычка",
       "count": 0
     }
   ],
-  "theme": "dark"
+  "theme": "light",
+  "pomodoro": {
+    "running": false,
+    "seconds": 0,
+    "time_input_value": "1",
+    "end_ts": null
+  }
 }
