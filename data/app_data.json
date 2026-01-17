@@ -46,5 +46,11 @@
       "count": 0
     }
   ],
-  "theme": "dark"
+  "theme": "dark",
+  "pomodoro": {
+    "running": false,
+    "seconds": 1500,
+    "time_input_value": "25",
+    "end_ts": null
+  }
 }

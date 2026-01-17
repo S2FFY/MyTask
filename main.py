@@ -6,7 +6,7 @@ from module.data_manager import load_data, save_data
 from module.todo_list import create_todo_list_page
 from module.habit_tracker import create_habit_tracker_page
 from module.eisenhower_matrix import create_eisenhower_matrix_page
-# from module.pomodoro import create_pomodoro_page
+from module.pomodoro import create_pomodoro_page
 from module.settings import create_settings_page
 
 
@@ -82,8 +82,9 @@ def main(page: ft.Page):
         min_width=100,
         min_extended_width=200,
         leading=ft.FloatingActionButton(
-            icon=ft.Icons.CREATE,
-            tooltip="HPP",
+            icon=ft.Icons.APPS,
+            tooltip="Myt=Tasks",
+            content=ft.Text("MyTasks"),
             on_click=lambda _: None
         ),
         group_alignment=-0.25,

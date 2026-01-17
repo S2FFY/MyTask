@@ -59,7 +59,7 @@ def create_settings_page(page, data_manager):
                 content=ft.Container(
                     content=ft.Column([
                         ft.Text("О приложении", size=18, weight=ft.FontWeight.BOLD),
-                        ft.Text("HPP (Habits Priorio Pomatrix)", size=16),
+                        ft.Text("MyTasks", size=16),
                         ft.Text("Версия 1.0.0", size=14),
                         ft.Text("Приложение для управления задачами, привычками и продуктивностью", size=12)
                     ], spacing=10),
